@@ -29,10 +29,8 @@ class Logger():
             return len(f.readlines())
         
     def write_data(self):
-        __data = " ".join(self.data)
-        _data = base64.b64encode(__data.encode()).decode()
         with open("MatPlot.cache", "a+") as f:
-            f.write(_data)
+            f.write(self.data)
             f.write("\n")
         self.data = []
         
