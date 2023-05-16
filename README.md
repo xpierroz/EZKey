@@ -1,3 +1,5 @@
+![EZKey Client Preview](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+
 READ README.MD
 
 this is still in development there's no release for now mtf

