@@ -23,6 +23,8 @@
 - EZKey sends the data to your Discord Webhook!
 - EZKey is easy to use! 
 
+<br>
+
 ### <p align="center">📝 How to use 📝</p>
 
 - Download this repository and extract it.
@@ -30,6 +32,12 @@
 - Then, the payload (ezkey.pyw) will be modified with your webhook
 - Edit the payload's name, and compile it (not necessary)
 - Send the payload to your victim
+
+<br>
+
+### <p align="center">🔧 How does it work 🔧</p>
+
+Once the victim executes the payload, it will start the keylogger in the background. Every keys will be recorded and saved to MatPlot.cache. Everytime the maxlen var (chosed by the user when creating the payload) is reached, the keylogger will send a file containing the data to the webhook. The data will be encrypted to INT, so it will be harder to detect it.
 
 ### <p align="center">🥷 Virus Total analyze 🥷</p>
 
