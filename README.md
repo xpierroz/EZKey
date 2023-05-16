@@ -1,4 +1,4 @@
-![EZKey Client Preview](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![EZKey Client Preview](assets/supergif.gif)
 
 READ README.MD
 
