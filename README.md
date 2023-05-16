@@ -1,14 +1,17 @@
-![EZKey Client Preview](assets/supergif.gif)
+<a id="top"></a>
+<h1 align="center">
+  <br>
+  <a href="https://github.com/xpierroz/EZKey"><img src="assets/supergif.gif" width=300 weigth=400 alt="R"></a>
+  <br>
+ EZKey
+  <br>
+</h1>
+<hr style="border-radius: 2%; margin-top: 60px; margin-bottom: 60px;" noshade="" size="20" width="100%">
 
-READ README.MD
-
-this is still in development there's no release for now mtf
-by the way don't run this shit for now because there's my testing webhook encoded so it'll send to me
-
-if u just wanna test the real real real real development version
-encode ur webhook with b64 and put it in ezkey.py l15
-and run ezkey.py but don't remember it's still in development
-
-gonna include a nice ui builder soon
-gonna include a control the keyboard live soon
-maybe gonna include an in-live keylogger
+<div align="center">
+    <br>
+    <h1>
+        A KeyLogger made with Python 🍹 
+    </h1>
+    <strong><a href="https://discord.gg/BptVd57QHr">Discord</a> | by <a href="https://github.com/xpierroz">pierro</a></strong>
+</div>
