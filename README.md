@@ -11,7 +11,7 @@
 <div align="center">
     <br>
     <h1>
-        A KeyLogger made with Python 🍹 
+        A FUD KeyLogger made with Python 🍹 
     </h1>
     <strong><a href="https://discord.gg/BptVd57QHr">Discord</a> | by <a href="https://github.com/xpierroz">pierro</a></strong>
 </div>
