@@ -23,13 +23,11 @@ EZKey is a POC made to demonstrate how a simple Python program is able to steal 
 
 ### Features
 
-- EZKey is FUD (fully undetectable)
-- EZKey encrypts the data to int
-- EZKey sends the data to your Discord Webhook
-- EZKey is easy to use
+- FUD (fully undetectable)
+- Encrypting the data
+- Sending the data to your Discord Webhook
 
-
-### How to use<
+### How to use
 
 - Download this repository and extract it.
 - Start client.py and create the payload
