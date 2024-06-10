@@ -7,10 +7,10 @@
 </h1>
 
 <div align="center">
-    <p>
+    <strong>
         POC | FUD KeyLogger made with Python 
-    <p>
-    <strong>by <a href="https://github.com/xpierroz">pierro</a></strong>
+    <strong>
+    <p>by <a href="https://github.com/xpierroz">pierro</a></p>
     <hr style="border-radius: 2%; margin-top: 60px; margin-bottom: 60px;" noshade="" size="20" width="100%">
     <br><br>
 </div>
