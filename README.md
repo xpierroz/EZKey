@@ -4,7 +4,6 @@
   <a href="https://github.com/xpierroz/EZKey"><img src="assets/supergif.gif" width=300 weigth=400 alt="R"></a>
   <br>
  EZKey
-  <br>
 </h1>
 
 <div align="center">
