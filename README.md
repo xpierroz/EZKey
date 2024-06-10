@@ -8,7 +8,6 @@
 </h1>
 
 <div align="center">
-    <br>
     <h2>
         POC | FUD KeyLogger made with Python 
     </h2>
