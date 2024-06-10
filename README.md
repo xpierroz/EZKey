@@ -6,7 +6,6 @@
  EZKey
   <br>
 </h1>
-<hr style="border-radius: 2%; margin-top: 60px; margin-bottom: 60px;" noshade="" size="20" width="100%">
 
 <div align="center">
     <br>
@@ -14,6 +13,7 @@
         POC | FUD KeyLogger made with Python 
     </h2>
     <strong>by <a href="https://github.com/xpierroz">pierro</a></strong>
+    <hr style="border-radius: 2%; margin-top: 60px; margin-bottom: 60px;" noshade="" size="20" width="100%">
     <br><br>
 </div>
 
