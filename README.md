@@ -45,8 +45,6 @@ Once the victim executes the payload, it will start the keylogger in the backgro
 
 ### Warning
 
-This program is made explicity for educational & research purposes only.
-Do not use for malicious purposes.
-I am not responsible for any of your actions!
+This tool is explicitly designed and provided exclusively for educational intentions. Its primary objective is to illuminate the vulnerabilities that files can be susceptible to, highlighting the need for proactive security measures. It is imperative that this tool is never leveraged for any illegal, unauthorized, or malicious undertakings. Under no circumstances will I assume liability for any detrimental consequences inflicted upon your computing infrastructure. I hereby absolve myself from any complicity in activities of an illicit nature. Emphatically, this tool's utility is confined to didactic objectives.
 
 <p align="center"><a href=#top>Back to Top</a></p>
