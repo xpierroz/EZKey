@@ -10,9 +10,9 @@
 
 <div align="center">
     <br>
-    <h1>
+    <h2>
         POC | FUD KeyLogger made with Python 
-    </h1>
+    </h2>
     <strong><a href="https://discord.gg/BptVd57QHr">Discord</a> | by <a href="https://github.com/xpierroz">pierro</a></strong>
 </div>
 
